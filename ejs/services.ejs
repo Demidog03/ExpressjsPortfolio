@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+</head>
+
+
+<body>
+<header>
+    <img src="/logo.png" alt="">
+    <%- include('./partials/navbar'); %>
+</header>
+<main class="aboutMeMain" style="background-color: white">
+    <section class="aboutSec" >
+
+        <div class="aboutSecText" style="background-color: white; color: darkcyan;">
+            <%- include('./partials/checklist'); %>
+        </div>
+        <div class="aboutSecImg" style="background-color: white">
+            <%- include('./partials/photo2'); %>
+        </div>
+
+
+    </section>
+</main>
+<%- include('./partials/footer'); %>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="./app.js" ></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+</head>
+<body>
+
+<header>
+    <img src="/logo.png" alt="">
+    <%- include('./partials/navbar'); %>
+</header>
+<main class="homeMain">
+    <section class="contactSec">
+        <div class="container">
+                <h1>Enter your email to contact me</h1>
+
+            <div id="app">
+                <form @submit.prevent="createServer">
+                    <div class="mb-3">
+                        <input class="form-control" type="text" v-model="email">
+                    </div>
+
+                    <button style="background-color: darkslategray" type="submit" class="btn btn-secondary  btn-lg">Submit</button>
+                </form>
+                <div class="spinner-border" role="status" v-if="servers.length === 0">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+
+<!--                UNCOMMENT ME TO SEE ALL EMAILS OR GO TO http://localhost:3000/api/server-->
+<!--                <ul class="list-group" v-else>-->
+<!--                    <li class="list-group-item" v-for="server in servers" @click="remove(server.id)">-->
+<!--                        {{server.email}}-->
+
+<!--                    </li>-->
+<!--                </ul>-->
+
+            </div>
+        </div>
+        <img class="emailImg" src="https://helpdeskgeek.com/wp-content/pictures/2019/04/email.png" alt="">
+    </section>
+</main>
+<%- include('./partials/footer'); %>
+
+<script src="https://unpkg.com/vue@next"></script>
+<script src="./app.js" ></script>
+</body>
+</html>
